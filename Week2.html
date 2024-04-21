@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .body{ 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .fb{
+        background-color: #3B5998;
+        color:white;
+        width: 100%;
+    }
+    .google{
+        background-color: #dd4b39;
+        color:white;
+        width: 100%;
+
+    }
+    .twitter{
+        background-color: #55ACEE;
+        color:white;
+        width: 100%;
+
+    }
+    input[type=submit] {
+        background-color: #04AA6D;
+        color:white
+        cursor pointer;
+    }
+    input[type=submit]:hover{
+        background-color: #c7088e;
+    }
+    input,
+    .btn {
+        appearance: none;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 12px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        line-height: 1.2em;
+        text-decoration: none;
+    }
+    a:hover {
+    background-color: rgb(135, 8, 247);
+    }
+    .col {
+        float: left;
+        width: 50%;
+        margin: auto;
+        padding: 0 50px;
+        margin-top: 6px;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+            /* vertical line */
+            .vl {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                border: 2px solid #ddd;
+                height: 175px;
+            }
+            .vl-innertext {
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #f1f1f1;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                padding: 8px 10px;
+            }
+    .bottom-container {
+        text-align: center;
+        background-color: #343534;
+        border-radius: 0px 0px 4px 4px;
+        }
+    .container{
+        position: relative;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px 0 30px 0;
+    }
+    .hide-md-lg{
+        display: none;
+    }
+    @media screen and (max-width: 650px) {
+        .col {
+            width: 100%;
+            margin-top: 0;
+        }
+/* hide the vertical line */
+        .vl {
+            display: none;
+        }
+/* show the hidden text on small screens */
+        .hide-md-lg {
+            display: block;
+            text-align: center;
+            }
+        }
+</style>
+<body>
+    <h2>Responsive Social Login Form</h2>
+    <p>Resize the browser window to see the responsive effect. 
+    When the screen is less than 650px wide, 
+    make the two columns stack on top of each other instead of next to each other.</p>
+    <div class="container">
+        <form action="/action_page.php"> <!--Back end Link-->
+            <div class="row">
+                <h2 style="text-align:center">Login with Social Media or Manually</h2>
+                
+                <div class="vl">
+                    <span class="vl-innertext">or</span>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.facebook.com/signup" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                    </a>
+                    <br>
+                
+                    <a href="https://twitter.com/i/flow/login" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                    </a>
+                    <br>
+                    <a href="https://accounts.google.com/v3/signin/identifier?hl=vi&ifkv=ASKXGp2DYpFVMVScl-irj_K2tiTebk7l7xhZ8ZWDth-HSUfC3iP-_fPmLW-4U5aumILUbmjp1Z_GuA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1762208996%3A1705904609418265&theme=glif" class="google btn">
+                        <i class="fa fa-google fa-fw"> </i> Login with Google+
+                    </a>
+    </div>
+
+    <div class="col">
+
+        <div class="hide-md-lg">
+            <p>Or sign in manually:</p>
+        </div>
+        <input type="text" name="username" placeholder="Username" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="submit" value="Login">
+
+    </div>
+</div>
+</form>
+</div>
+
+<div class="bottom-container">
+
+    <div class="row">
+
+        <div class="col">
+
+            <a href="#" style="color: white" class="btn">Sign up</a>
+
+        </div>
+
+        <div class="col">
+            <a href="#" style="color: white" class="btn">Forgot password?
+            </a>
+
+        </div>
+
+    </div>
+<br>
+<br>
+
+</div>
+</body>
+</html>
